@@ -21,10 +21,11 @@ export default function Home() {
 	// 	console.log(tasks)
 	// }, [])
 
-	const tasks = initialTasks.allTasks
-	
+	let tasks = initialTasks
+	tasks = tasks.addTask(Task.createActiveTask(4, 'Program TCC'))
+
 	function renderTasks(){
-		return tasks.map((task: TaskProps) => {
+		return tasks.allTasks.map((task: TaskProps) => {
 			return (
 				<div key={task.id} className="font-bold text-lg">
 					<span>{task.id}, {task.description}, {task.finished ? 'Finalizada' : 'Ativa'}</span>
