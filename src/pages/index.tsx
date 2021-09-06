@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import initialTasks from '../data/mock'
 import Task from '../model/Task'
+import Selection from '../components/list/Selection'
 //import Task from '../model/Task'
 
 type TaskProps = {
@@ -38,6 +39,7 @@ export default function Home() {
 	return (
 		<main className='flex flex-col justify-center items-center h-screen text-white bg-gradient-to-tr from-purple-500 to-yellow-600'>
 			{renderTasks()}
+			<Selection></Selection>
 		</main>
 	)
 }
