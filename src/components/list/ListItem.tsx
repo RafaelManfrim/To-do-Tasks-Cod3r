@@ -1,3 +1,4 @@
+import Task from '../../model/Task'
 import Selection from './Selection'
 
 type ListItemProps = {
@@ -8,7 +9,7 @@ type ListItemProps = {
 
 export default function ListItem(props: ListItemProps){
 
-    const listItemStyle = 'flex items-center bg-white border-b border-gray-400 p-4 cursor-pointer'
+    const listItemStyle = 'flex items-center border-b border-gray-400 p-4 cursor-pointer'
     const finishedStyle = props.finished ? 'line-through text-gray-400' : 'text-gray-600'
 
     return (
