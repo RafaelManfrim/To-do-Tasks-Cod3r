@@ -1,5 +1,7 @@
 enum FilterType {
-    NONE, ACTIVE, COMPLETED
+    NONE, 
+    ACTIVE, 
+    COMPLETED
 }
 
 export default FilterType
