@@ -7,7 +7,7 @@ type ListButtonProps = {
 
 export default function ListButton(props: ListButtonProps){
 
-    const isSelectedStyle = props.selected ? 'border-b-4 border-purple-400' : ''
+    const isSelectedStyle = props.selected ? 'border-b-4 border-purple-400 ' : ''
     const classButton = props.cls !== undefined ? props.cls : ''
 
     const buttonStyle = 'text-gray-500 font-semibold hover:text-black focus:outline-none ' + isSelectedStyle + classButton

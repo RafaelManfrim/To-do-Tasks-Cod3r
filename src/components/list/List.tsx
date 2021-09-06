@@ -1,6 +1,6 @@
 import TaskList from '../../model/TaskList'
-import ListButton from './ListButton'
 import ListItem from './ListItem'
+import ListFooter from './ListFooter'
 
 type ListProps = {
     tasks: TaskList
@@ -24,15 +24,7 @@ export default function List(props: ListProps){
         <div className="flex w-3/5">
             <ul className="w-full list-none bg-white shadow-lg">
                 {renderTasks()}
-                <li>
-                    <ListButton selected={true} onClick={() => {}}>All</ListButton>
-                </li>
-                <li>
-                    <ListButton selected={false} onClick={() => {}}>Actives</ListButton>
-                </li>
-                <li>
-                    <ListButton selected={false} onClick={() => {}}>Completed</ListButton>
-                </li>
+                <ListFooter tasks={props.tasks} changed={props.changed}/>
             </ul>
         </div>
     )
