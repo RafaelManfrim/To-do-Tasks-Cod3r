@@ -9,7 +9,7 @@ export default function Home() {
 	const [tasks, setTasks] = useState(initialTasks)
 
 	return (
-		<main className='flex flex-col h-screen bg-gradient-to-tr from-purple-500 to-yellow-600'>
+		<main className='flex flex-col h-screen bg-gradient-to-tr from-gray-100 to-gray-400'>
 			<Header>
 				
 			</Header>
