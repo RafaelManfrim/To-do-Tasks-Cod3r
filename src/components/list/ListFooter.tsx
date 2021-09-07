@@ -22,7 +22,7 @@ export default function ListFooter(props: ListFooterProps){
                 <ListButton cls='' selected={props.tasks.usedFilter === FilterType.COMPLETED} onClick={() => props.changed(props.tasks.filterCompleted())}>Completed</ListButton>
             </div>
             <div className="text-xs sm:text-base">
-                <ListButton onClick={() => {props.tasks.deleteCompletedTasks}}>Delete completed</ListButton>
+                <ListButton onClick={() => props.changed(props.tasks.deleteCompletedTasks())}>Delete completed</ListButton>
             </div>  
         </li>
     )
