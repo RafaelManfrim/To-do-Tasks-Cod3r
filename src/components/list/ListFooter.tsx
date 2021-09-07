@@ -18,7 +18,7 @@ export default function ListFooter(props: ListFooterProps){
             </div>
             <div className="flex-1 text-xs sm:text-base">
                 <ListButton cls='' selected={props.tasks.usedFilter === FilterType.NONE} onClick={() => props.changed(props.tasks.filterNone())}>All</ListButton>
-                <ListButton cls="mx-3" selected={props.tasks.usedFilter === FilterType.ACTIVE} onClick={() => props.changed(props.tasks.filterActives())}>Actives</ListButton>
+                <ListButton cls="mx-2 sm:mx-3" selected={props.tasks.usedFilter === FilterType.ACTIVE} onClick={() => props.changed(props.tasks.filterActives())}>Actives</ListButton>
                 <ListButton cls='' selected={props.tasks.usedFilter === FilterType.COMPLETED} onClick={() => props.changed(props.tasks.filterCompleted())}>Completed</ListButton>
             </div>
             <div className="text-xs sm:text-base">

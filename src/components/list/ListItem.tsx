@@ -15,7 +15,7 @@ export default function ListItem(props: ListItemProps){
     return (
         <li className={listItemStyle} onClick={props.alternateStatus}>
             <Selection selected={props.finished}/>
-            <span className={'ml-3 text-xl ' + finishedStyle}>{props.taskDescription}</span>
+            <span className={'ml-3 text-base sm:text-xl ' + finishedStyle}>{props.taskDescription}</span>
         </li>
     )
 }
