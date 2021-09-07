@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import initialTasks from '../data/mock'
 import Task from '../model/Task'
+import TaskList from '../model/TaskList'
 import List from '../components/list/List'
 import Form from '../components/form/Form'
 import Content from '../components/template/Content'
@@ -9,6 +10,10 @@ import Header from '../components/template/Header'
 export default function Home() {
 
 	const [tasks, setTasks] = useState(initialTasks)
+
+	function changed(newTasks: TaskList){
+		setTasks(newTasks)
+	}
 
 	function newTaskCreated(newTask: Task){
 		setTasks(tasks.addTask(newTask))
@@ -20,7 +25,7 @@ export default function Home() {
 				<Form newTaskCreated={newTaskCreated}></Form>
 			</Header>
 			<Content>
-				<List tasks={tasks} changed={newTasks => {setTasks(newTasks)}} />
+				<List tasks={tasks} changed={newTasks => changed(newTasks)} />
 			</Content>
 		</main>
 	)

@@ -1,4 +1,3 @@
-import Task from '../../model/Task'
 import Selection from './Selection'
 
 type ListItemProps = {

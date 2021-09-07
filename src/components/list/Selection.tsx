@@ -1,3 +1,6 @@
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 type SelectionProps = {
     selected?: boolean
 }
@@ -11,7 +14,7 @@ export default function Selection(props: SelectionProps) {
     if(props.selected){
         return (
             <div className={selectStyle + selectGradient + alignCenter + "text-white"}>
-                x
+                <FontAwesomeIcon icon={faCheck}/>
             </div>
         )
     } else {
