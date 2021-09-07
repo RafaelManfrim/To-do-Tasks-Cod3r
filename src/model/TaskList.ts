@@ -37,7 +37,7 @@ export default class TaskList {
 
     filterNone(): TaskList {
         if(this.usedFilter !== FilterType.NONE){
-            return new TaskList(this.allTasks, FilterType.NONE)
+            return new TaskList(this.#allTasks, FilterType.NONE)
         } else {
             return this
         }
@@ -45,7 +45,7 @@ export default class TaskList {
 
     filterActives(): TaskList {
         if(this.usedFilter !== FilterType.ACTIVE){
-            return new TaskList(this.allTasks, FilterType.ACTIVE)
+            return new TaskList(this.#allTasks, FilterType.ACTIVE)
         } else {
             return this
         }
@@ -53,7 +53,7 @@ export default class TaskList {
 
     filterCompleted(): TaskList {
         if(this.usedFilter !== FilterType.COMPLETED){
-            return new TaskList(this.allTasks, FilterType.COMPLETED)
+            return new TaskList(this.#allTasks, FilterType.COMPLETED)
         } else {
             return this
         }
